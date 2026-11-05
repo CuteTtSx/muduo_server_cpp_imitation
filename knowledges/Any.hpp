@@ -79,14 +79,13 @@ private:
     _Holder *_content;
 };
 
-class Test
-{
-public:
-    Test() { std::cout << "Test()" << std::endl; }
-    Test(const Test &other) { std::cout << "Test(const Test &other)" << std::endl; }
-    ~Test() { std::cout << "~Test()" << std::endl; }
-};
-
+// class Test
+// {
+// public:
+//     Test() { std::cout << "Test()" << std::endl; }
+//     Test(const Test &other) { std::cout << "Test(const Test &other)" << std::endl; }
+//     ~Test() { std::cout << "~Test()" << std::endl; }
+// };
 // int main()
 // {
 //     // 构造
