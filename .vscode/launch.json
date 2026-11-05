@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "GDB：调试服务端",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/test/server",
+            "args": [],
+            "cwd": "${workspaceFolder}/test",
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "显示 C++ 标准库容器的内容",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "构建服务端（调试）"
+        },
+        {
+            "name": "GDB：调试客户端",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/test/client",
+            "args": [],
+            "cwd": "${workspaceFolder}/test",
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "显示 C++ 标准库容器的内容",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "构建客户端（调试）"
+        }
+    ]
+}

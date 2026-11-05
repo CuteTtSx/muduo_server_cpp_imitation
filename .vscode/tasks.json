@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "构建服务端（调试）",
+            "type": "process",
+            "command": "/usr/bin/make",
+            "args": ["-B", "server"],
+            "options": {
+                "cwd": "${workspaceFolder}/test"
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": ["relative", "${workspaceFolder}/test"]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "构建客户端（调试）",
+            "type": "process",
+            "command": "/usr/bin/make",
+            "args": [
+                "-B",
+                "client",
+                "CXXFLAGS=-std=c++11 -g3 -O0 -Wall -Wextra -pthread"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/test"
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": ["relative", "${workspaceFolder}/test"]
+            },
+            "group": "build"
+        }
+    ]
+}
